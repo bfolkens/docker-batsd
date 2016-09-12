@@ -1,2 +1,8 @@
+# truncate 10 second aggregations
 0 * * * * root bash -l -c '/opt/batsd/bin/batsd -c /opt/batsd/config.yml truncate 10'
+# truncate 60 second aggregations
 0 0 * * 2,5 root bash -l -c '/opt/batsd/bin/batsd -c /opt/batsd/config.yml truncate 60'
+# truncate 600 second aggregations
+0 0 0 * * root bash -l -c '/opt/batsd/bin/batsd -c /opt/batsd/config.yml truncate 600'
+# truncate 3600 second aggregations
+0 0 0 * * root bash -l -c '/opt/batsd/bin/batsd -c /opt/batsd/config.yml truncate 3600'
